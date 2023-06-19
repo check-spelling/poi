@@ -117,7 +117,7 @@ public class SheetBuilder {
      * Sets the cell value using object type information.
      *
      * @param cell  cell to change
-     * @param value value to set
+     * @param value to set
      */
     private void setCellValue(Cell cell, Object value) {
         if (value == null || cell == null) {
