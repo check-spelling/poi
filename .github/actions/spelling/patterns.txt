@@ -1,0 +1,147 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# Automatically suggested patterns
+# hit-count: 2038 file-count: 445
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
+
+# hit-count: 1288 file-count: 291
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
+
+# hit-count: 344 file-count: 105
+# IServiceProvider
+\bI(?=(?:[A-Z][a-z]{2,})+\b)
+
+# hit-count: 218 file-count: 137
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+# hit-count: 95 file-count: 23
+# Compiler flags
+(?:^|[\t ,>"'`=(])-(?:[PX]|D(?!ouble)|l(?!ayout|eft|ength|ine))(?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+
+# hit-count: 84 file-count: 28
+# in a version of check-spelling after @0.0.21 printf markers won't be automatically consumed
+# printf markers
+(?<!\\)\\[nrt](?=[a-z]{2,})
+
+# hit-count: 70 file-count: 26
+# base64 encoded content
+(['"])[-a-zA-Z=;:/0-9+]+=\g{-1}
+
+# hit-count: 45 file-count: 12
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# hit-count: 27 file-count: 25
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# hit-count: 21 file-count: 11
+# mailto urls
+mailto:[-a-zA-Z=;:/?%&0-9+@.]{3,}
+
+# hit-count: 17 file-count: 6
+# Non-English
+[a-zA-Z]*[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3}[a-zA-ZÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]*|[a-zA-Z]{3,}[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]|[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3,}
+
+# hit-count: 8 file-count: 2
+# Windows short paths
+[/\\][^/\\]{5,6}~\d{1,2}[/\\]
+
+# hit-count: 3 file-count: 2
+# Time Zones
+\b(?:Africa|Atlantic|America|Antarctica|Asia|Australia|Europe|Indian|Pacific)(?:/\w+)+
+
+# hit-count: 2 file-count: 2
+# URL escaped characters
+\%[0-9A-F][A-F]
+
+# hit-count: 2 file-count: 1
+# css url wrappings
+\burl\([^)]*\)
+
+# hit-count: 2 file-count: 1
+# IPv6
+\b(?:[0-9a-fA-F]{0,4}:){3,7}[0-9a-fA-F]{0,4}\b
+
+# hit-count: 2 file-count: 1
+# tar arguments
+\b(?:\\n|)g?tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[ABGJMOPRSUWZacdfh-pr-xz]+\b)(?:=[^ ]*|))+
+
+# hit-count: 1 file-count: 1
+# Update Lorem based on your content (requires `ge` and `w` from https://github.com/jsoref/spelling; and `review` from https://github.com/check-spelling/check-spelling/wiki/Looking-for-items-locally )
+# grep '^[^#].*lorem' .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
+# Warning, while `(?i)` is very neat and fancy, if you have some binary files that aren't proper unicode, you might run into:
+## Operation "substitution (s///)" returns its argument for non-Unicode code point 0x1C19AE (the code point will vary).
+## You could manually change `(?i)X...` to use `[Xx]...`
+## or you could add the files to your `excludes` file (a version after 0.0.19 should identify the file path)
+# Lorem
+(?:\w|\s|[,.])*\b(?i)(?:amet|consectetur|cursus|dolor|eros|ipsum|lacus|libero|ligula|lorem|magna|neque|nulla|suscipit|tempus)\b(?:\w|\s|[,.])*
+
+# base64
+>[-a-zA-Z=;:/0-9+]+=</
+
+# decompress
+decompress\(".*"
+
+"[-a-zA-Z=;:/0-9+]{60,}"\s*[;+]
+
+# Questionably acceptable forms of `in to`
+# Personally, I prefer `log into`, but people object
+# https://www.tprteaching.com/log-into-log-in-to-login/
+\b(?:[Ll]og|[Ss]ign) in to\b
+
+# to opt in
+\bto opt in\b
+
+# test data
+data\.put.*new.*\{.*\}
+confirmMid\(.*\)
+File\(".*?"
+assert(?:Contains|EndsWith|Equals|NotContained|StartsWith)(?:IgnoreCase|)\(.*
+
+Y2K
+
+&(?:C(?!H)|[LR])(?=[A-Za-z])
+
+\(0x[0-9A-F]{4}, "[\w_]+", "[-\w]+", ".*?"
+
+%[0-9a-f][a-f](?=[a-z]{2,})
+
+%n(?!o)(?=[a-z]{2,})
+
+pattern=".*?"
+
+# compatibility
+# https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/78234
+\w+Supress(?:TopSpacing|Spdf)
+
+xml-fragment>.*?</
+
+# https://wiki.documentfoundation.org/Development/stuck_stuff#%22presetShapeDefinitons%22_typo
+presetShapeDefinitons
+
+# acceptable duplicates
+# ls directory listings
+[-bcdlpsw](?:[-r][-w][-Ssx]){3}\s+\d+\s+\S+\s+\S+\s+\d+\s+
+# mount
+\bmount\s+-t\s+(\w+)\s+\g{-1}\b
+# C types and repeated CSS values
+\s(blah?|center|DEADBEEF|div|dot|Exception|inherit|int|long|LONG|none|normal|SHORT|solid|that|thin|transparent|very)(?: \g{-1})+\s
+# C struct
+\bstruct\s+(\w+)\s+\g{-1}\b
+# go templates
+\s(\w+)\s+\g{-1}\s+\`(?:graphql|inject|json|yaml):
+# doxygen / javadoc / .net
+(?:[\\@](?:brief|groupname|t?param|return|retval)|(?:public|private)(?:\s+static|\s+readonly)*)\s+(\w+)\s+\g{-1}\s
+
+# Commit message -- Signed-off-by and friends
+^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$
+
+# Autogenerated revert commit message
+^This reverts commit [0-9a-f]{40}\.$
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
