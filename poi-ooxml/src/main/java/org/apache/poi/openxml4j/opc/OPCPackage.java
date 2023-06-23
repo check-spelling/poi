@@ -1554,7 +1554,7 @@ public abstract class OPCPackage implements RelationshipSource, Closeable {
 
     /**
      * Replace a content type in this package.<p>
-     * A typical scneario to call this method is to rename a template file to the main format, e.g.
+     * A typical scenario to call this method is to rename a template file to the main format, e.g.
      * <ul>
      *     <li>".dotx" to ".docx"</li>
      *     <li>".dotm" to ".docm"</li>
