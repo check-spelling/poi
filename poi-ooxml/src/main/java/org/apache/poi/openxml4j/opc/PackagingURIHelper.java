@@ -486,7 +486,7 @@ public final class PackagingURIHelper {
      *
      * @param partName
      *            The part name to validate.
-     * @return The correspondant part name if valid, else <code>null</code>.
+     * @return The correspondent part name if valid, else <code>null</code>.
      * @throws InvalidFormatException
      *             Throws if the specified part name is not OPC compliant.
      * @see #createPartName(URI)
@@ -509,7 +509,7 @@ public final class PackagingURIHelper {
      *            The part name to validate.
      * @param relativePart
      *            The relative base part.
-     * @return The correspondant part name if valid, else <code>null</code>.
+     * @return The correspondent part name if valid, else <code>null</code>.
      * @throws InvalidFormatException
      *             Throws if the specified part name is not OPC compliant.
      * @see #createPartName(URI)
@@ -533,7 +533,7 @@ public final class PackagingURIHelper {
      *            The part name URI to validate.
      * @param relativePart
      *            The relative base part.
-     * @return The correspondant part name if valid, else <code>null</code>.
+     * @return The correspondent part name if valid, else <code>null</code>.
      * @throws InvalidFormatException
      *             Throws if the specified part name is not OPC compliant.
      * @see #createPartName(URI)
