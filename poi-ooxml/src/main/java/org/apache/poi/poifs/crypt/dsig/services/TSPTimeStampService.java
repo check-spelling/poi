@@ -187,7 +187,7 @@ public class TSPTimeStampService implements TimeStampService {
             X509CertificateHolder parentHolder = certificateMap.get(issuer.getName());
             child = (parentHolder != null)
                 ? x509converter.getCertificate(parentHolder)
-                : signatureConfig.getCachedCertificateByPrinicipal(issuer.getName());
+                : signatureConfig.getCachedCertificateByPrincipal(issuer.getName());
             if (child != null) {
                 retrieveCRL(signatureConfig, child).forEach(revocationData::addCRL);
             }
@@ -215,7 +215,7 @@ public class TSPTimeStampService implements TimeStampService {
 
     /**
      * Check if CRL is to be added, check cached CRLs in config and download if necessary.
-     * Can be overriden to suppress the logic
+     * Can be overridden to suppress the logic
      * @return empty list, if not found or suppressed, otherwise the list of CRLs as encoded bytes
      */
     protected List<byte[]> retrieveCRL(SignatureConfig signatureConfig, X509Certificate holder) throws IOException {

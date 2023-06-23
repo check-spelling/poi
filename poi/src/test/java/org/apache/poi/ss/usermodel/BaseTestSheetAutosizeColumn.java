@@ -85,7 +85,7 @@ public abstract class BaseTestSheetAutosizeColumn {
         // autosize not-evaluated cells, formula cells are sized as if the result is 0
         for (int i = 0; i < 6; i++) sheet.autoSizeColumn(i);
 
-        assertTrue(sheet.getColumnWidth(0) < sheet.getColumnWidth(1));  // width of '0' is less then width of '10'
+        assertTrue(sheet.getColumnWidth(0) < sheet.getColumnWidth(1));  // width of '0' is less than width of '10'
         assertEquals(sheet.getColumnWidth(1), sheet.getColumnWidth(2)); // 10 and '10' should be sized equally
         assertEquals(sheet.getColumnWidth(3), sheet.getColumnWidth(0)); // formula result is unknown, the width is calculated  for '0'
         assertEquals(sheet.getColumnWidth(4), sheet.getColumnWidth(5)); // 10.0000 and '10.0000'
@@ -95,7 +95,7 @@ public abstract class BaseTestSheetAutosizeColumn {
 
         for (int i = 0; i < 6; i++) sheet.autoSizeColumn(i);
 
-        assertTrue(sheet.getColumnWidth(0) < sheet.getColumnWidth(1));  // width of '0' is less then width of '10'
+        assertTrue(sheet.getColumnWidth(0) < sheet.getColumnWidth(1));  // width of '0' is less than width of '10'
         assertEquals(sheet.getColumnWidth(1), sheet.getColumnWidth(2)); // columns 1, 2 and 3 should have the same width
         assertEquals(sheet.getColumnWidth(2), sheet.getColumnWidth(3)); // columns 1, 2 and 3 should have the same width
         assertEquals(sheet.getColumnWidth(4), sheet.getColumnWidth(5)); // 10.0000 and '10.0000'
@@ -184,7 +184,7 @@ public abstract class BaseTestSheetAutosizeColumn {
         assertEquals(sheet.getColumnWidth(6), sheet.getColumnWidth(5)); // date formatted as 'mmm/dd/yyyy'
 
         // YK: width of not-evaluated formulas that return data is not determined
-        // POI seems to conevert '0' to Excel date which is the beginng of the Excel's date system
+        // POI seems to convert '0' to Excel date which is the beginning of the Excel's date system
 
         // evaluate formulas and re-autosize
         evaluateWorkbook(workbook);
@@ -274,13 +274,13 @@ public abstract class BaseTestSheetAutosizeColumn {
         Cell cell0 = row.createCell(0);
         cell0.setCellValue("Apache Software Foundation");
 
-        int defaulWidth = sheet.getColumnWidth(0);
+        int defaultWidth = sheet.getColumnWidth(0);
         sheet.autoSizeColumn(0);
         // column is unchanged if merged regions are ignored (Excel like behavior)
-        assertEquals(defaulWidth, sheet.getColumnWidth(0));
+        assertEquals(defaultWidth, sheet.getColumnWidth(0));
 
         sheet.autoSizeColumn(0, true);
-        assertTrue(sheet.getColumnWidth(0) > defaulWidth);
+        assertTrue(sheet.getColumnWidth(0) > defaultWidth);
 
         workbook.close();
     }

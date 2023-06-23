@@ -138,7 +138,7 @@ public final class HSSFDataFormat implements DataFormat {
         if (_builtinFormats.length > index && _builtinFormats[index] != null) {
            // It's in the built in range
            if (fmt != null) {
-              // It's been overriden, use that value
+              // It's been overridden, use that value
               return fmt;
            } else {
               // Standard built in format

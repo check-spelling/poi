@@ -367,7 +367,7 @@ subprojects {
                     // see https://github.com/java9-modularity/gradle-modules-plugin/issues/97
                     // opposed to the recommendation there, it doesn't work to add ... to the dependencies
                     // testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.7.1'
-                    // gradles gradle-worker.jar is still not a JPMS module and thus runs as unnamed module
+                    // gradle's gradle-worker.jar is still not a JPMS module and thus runs as unnamed module
                     '--add-exports','org.junit.platform.commons/org.junit.platform.commons.util=org.apache.poi.poi',
                     '--add-exports','org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED',
                     '--add-exports','org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED',
@@ -405,7 +405,7 @@ subprojects {
         // https://docs.sonarqube.org/display/SONARQUBE52/Analyzing+with+SonarQube+Scanner+for+Gradle
         // for documentation of properties.
         //
-        // Some additional properties are currently set in the Jenkins-DSL, see jenksin/create_jobs.groovy
+        // Some additional properties are currently set in the Jenkins-DSL, see jenkins/create_jobs.groovy
         //
         sonarqube {
             properties {

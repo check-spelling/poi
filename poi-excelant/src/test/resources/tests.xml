@@ -122,10 +122,10 @@ under the License.
         <poi:excelant fileName="${data.dir.name}/spreadsheet/excelant.xls">
 
             <poi:test name="failonerror" showFailureDetail="true" showSuccessDetails="true">
-                <poi:setDouble cell="'MortageCalculatorFunction'!$D$1" value="1"/>
-                <poi:setDouble cell="'MortageCalculatorFunction'!$D$2" value="2"/>
-                <poi:setFormula cell="'MortageCalculatorFunction'!$D$3" value ="SUM(D1:D2)"/>
-                <poi:evaluate showDelta="true" cell="'MortageCalculatorFunction'!$D$3" expectedValue="2"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$D$1" value="1"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$D$2" value="2"/>
+                <poi:setFormula cell="'MortgageCalculatorFunction'!$D$3" value ="SUM(D1:D2)"/>
+                <poi:evaluate showDelta="true" cell="'MortgageCalculatorFunction'!$D$3" expectedValue="2"/>
             </poi:test>
 
          </poi:excelant>
@@ -138,10 +138,10 @@ under the License.
         <poi:excelant fileName="${data.dir.name}/spreadsheet/excelant.xls" failOnError="true">
 
             <poi:test name="failonerror" showFailureDetail="true" showSuccessDetails="true">
-                <poi:setDouble cell="'MortageCalculatorFunction'!$D$1" value="1"/>
-                <poi:setDouble cell="'MortageCalculatorFunction'!$D$2" value="2"/>
-                <poi:setFormula cell="'MortageCalculatorFunction'!$D$3" value ="SUM(D1:D2)"/>
-                <poi:evaluate showDelta="true" cell="'MortageCalculatorFunction'!$D$3" expectedValue="2"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$D$1" value="1"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$D$2" value="2"/>
+                <poi:setFormula cell="'MortgageCalculatorFunction'!$D$3" value ="SUM(D1:D2)"/>
+                <poi:evaluate showDelta="true" cell="'MortgageCalculatorFunction'!$D$3" expectedValue="2"/>
             </poi:test>
 
          </poi:excelant>
@@ -151,10 +151,10 @@ under the License.
         <poi:excelant fileName="${data.dir.name}/spreadsheet/excelant.xls" failOnError="true">
 
             <poi:test name="failonerror" showFailureDetail="false" showSuccessDetails="false">
-                <poi:setDouble cell="'MortageCalculatorFunction'!$D$1" value="1"/>
-                <poi:setDouble cell="'MortageCalculatorFunction'!$D$2" value="2"/>
-                <poi:setFormula cell="'MortageCalculatorFunction'!$D$3" value ="SUM(D1:D2)"/>
-                <poi:evaluate showDelta="true" cell="'MortageCalculatorFunction'!$D$3" expectedValue="2"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$D$1" value="1"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$D$2" value="2"/>
+                <poi:setFormula cell="'MortgageCalculatorFunction'!$D$3" value ="SUM(D1:D2)"/>
+                <poi:evaluate showDelta="true" cell="'MortgageCalculatorFunction'!$D$3" expectedValue="2"/>
             </poi:test>
 
          </poi:excelant>
@@ -166,10 +166,10 @@ under the License.
             <poi:udf functionAlias="calculatePayment"
                      className="org.apache.poi.ss.excelant.CalculateMortgageFunction"/>
             <poi:test>
-                <poi:setDouble cell="'MortageCalculatorFunction'!$B$1" value="240000"/>
-                <poi:setDouble cell="'MortageCalculatorFunction'!$B$2" value ="0.11"/>
-                <poi:setDouble cell="'MortageCalculatorFunction'!$B$3" value ="30"/>
-                <poi:evaluate showDelta="true" cell="'MortageCalculatorFunction'!$B$4"
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$B$1" value="240000"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$B$2" value ="0.11"/>
+                <poi:setDouble cell="'MortgageCalculatorFunction'!$B$3" value ="30"/>
+                <poi:evaluate showDelta="true" cell="'MortgageCalculatorFunction'!$B$4"
                               expectedValue="2285.576149" precision="1.0E-4" />
             </poi:test>
          </poi:excelant>

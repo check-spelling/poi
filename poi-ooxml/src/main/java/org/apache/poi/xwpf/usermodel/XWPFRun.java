@@ -768,7 +768,7 @@ public class XWPFRun implements ISDTContents, IRunElement, CharacterRun {
      * If fcr is null, the font char range "ascii" is used
      *
      * @param fcr the font char range, defaults to "ansi"
-     * @return a string representing the font famil
+     * @return a string representing the font family
      */
     public String getFontFamily(FontCharRange fcr) {
         CTRPr pr = getRunProperties(false);
@@ -1505,7 +1505,7 @@ public class XWPFRun implements ISDTContents, IRunElement, CharacterRun {
      */
     @Deprecated
     @Removal(version = "7.0.0")
-    public STHighlightColor.Enum getTextHightlightColor() {
+    public STHighlightColor.Enum getTextHighlightColor() {
         return getTextHighlightColor();
     }
 
