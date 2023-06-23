@@ -212,7 +212,7 @@ public abstract class OPCPackage implements RelationshipSource, Closeable {
            // pack.originalPackagePath = file.getAbsolutePath();
            return pack;
        } catch (InvalidFormatException | RuntimeException e) {
-           // use revert() to free resources when the packgae is opened read-only
+           // use revert() to free resources when the package is opened read-only
            pack.revert();
 
            throw e;
