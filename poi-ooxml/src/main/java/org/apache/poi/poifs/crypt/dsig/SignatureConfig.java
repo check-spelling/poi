@@ -255,7 +255,7 @@ public class SignatureConfig {
     private String commitmentType = "Created and approved this document";
 
     /**
-     * Swtich to enable/disable automatic CRL download - by default the download is with all https hostname
+     * Switch to enable/disable automatic CRL download - by default the download is with all https hostname
      * and certificate verifications disabled.
      *
      * @since POI 5.2.1
