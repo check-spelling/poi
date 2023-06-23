@@ -3192,7 +3192,7 @@ under the License.
         </sequential>
     </macrodef>
 
-    <!-- TODO: currently this only saves a copy and paste snipplet to a file ...
+    <!-- TODO: currently this only saves a copy and paste snippet to a file ...
          would be nice if it really changes changes.xml and download.xml
          Doesn't work with Java6 - the https urls can't be accessed via loadChecksum
      -->
@@ -3223,7 +3223,7 @@ under the License.
         <download-line prop="li3" dist="src" pack="tar.gz"/>
         <download-line prop="li4" dist="src" pack="zip"/>
 
-<echo file="download-snipplet.xml"><![CDATA[
+<echo file="download-snippet.xml"><![CDATA[
     <section id="POI-${version.id}"><title>${rel_date} - POI ${version.id} available</title>
       <p>The Apache POI team is pleased to announce the release of ${version.id}.
          Featured are a handful of new areas of functionality and numerous bug fixes.</p>
