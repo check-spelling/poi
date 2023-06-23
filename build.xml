@@ -482,7 +482,7 @@ under the License.
         <pathelement location="${main.output.dir}"/>
         <pathelement location="${ooxml.test.guava.jar}"/>
         <pathelement location="${ooxml.test.opczip.jar}"/>
-        <!-- classes are omitted on test cases outside the xml-dsign area to avoid classpath poisioning -->
+        <!-- classes are omitted on test cases outside the xml-dsign area to avoid classpath poisoning -->
         <!--path refid="ooxml.xmlsec.classpath"/-->
         <!-- Used only for ExtractorFactory, see #57963 -->
         <pathelement location="${scratchpad.output.dir}" unless:true="${scratchpad.ignore}"/>
