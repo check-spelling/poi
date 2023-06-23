@@ -111,7 +111,7 @@ public final class PackagePartName implements Comparable<PackagePartName> {
             partURI = new URI(partName);
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException(
-                    "partName argmument is not a valid OPC part name !");
+                    "partName argument is not a valid OPC part name !");
         }
 
         if (checkConformance) {
