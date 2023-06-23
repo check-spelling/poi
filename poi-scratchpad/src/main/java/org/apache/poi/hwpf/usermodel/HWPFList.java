@@ -157,7 +157,7 @@ public final class HWPFList
 
     public int getStartAt( char level )
     {
-        if ( isStartAtOverriden( level ) )
+        if ( isStartAtOverridden( level ) )
         {
             return _lfoData.getRgLfoLvl()[level].getIStartAt();
         }
@@ -178,7 +178,7 @@ public final class HWPFList
         return _ignoreLogicalLeftIndentation;
     }
 
-    public boolean isStartAtOverriden( char level )
+    public boolean isStartAtOverridden( char level )
     {
         ListFormatOverrideLevel lfolvl = _lfoData.getRgLfoLvl().length > level ? _lfoData
                 .getRgLfoLvl()[level] : null;
