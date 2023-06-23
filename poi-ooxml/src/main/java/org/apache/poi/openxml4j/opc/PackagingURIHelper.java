@@ -625,7 +625,7 @@ public final class PackagingURIHelper {
      *            Source part URI
      * @return the full path (as URI) of the relation file
      * @throws InvalidOperationException
-     *             Throws if the specified URI is a relationshp part.
+     *             Throws if the specified URI is a relationship part.
      */
     public static PackagePartName getRelationshipPartName(
             PackagePartName partName) {
