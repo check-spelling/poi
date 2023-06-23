@@ -2518,7 +2518,7 @@ under the License.
         <fail><condition><matches pattern="[1-9][0-9]* Unknown Licens" string="${rat.reportcontent}"/></condition></fail>
     </target>
 
-    <!-- Runs the Forbiddens APIs checker against the source code, to -->
+    <!-- Runs the Forbidden APIs checker against the source code, to -->
     <!--  spot any cases where we've accidently used methods we shouldn't -->
     <!-- See https://github.com/policeman-tools/forbidden-apis for details -->
     <!--  of the checks that this can do -->
