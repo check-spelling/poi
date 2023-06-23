@@ -359,7 +359,7 @@ final class TestHSSFSheet extends BaseTestSheet {
      */
     @Test
     void cloneWithProtect() throws IOException {
-        String passwordA = "secrect";
+        String passwordA = "secret";
         int expectedHashA = -6810;
         String passwordB = "admin";
         int expectedHashB = -14556;
