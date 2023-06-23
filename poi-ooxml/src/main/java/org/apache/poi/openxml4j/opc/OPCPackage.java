@@ -495,7 +495,7 @@ public abstract class OPCPackage implements RelationshipSource, Closeable {
     /**
      * Add a thumbnail to the package. This method is provided to make easier
      * the addition of a thumbnail in a package. You can do the same work by
-     * using the traditionnal relationship and part mechanism.
+     * using the traditional relationship and part mechanism.
      *
      * @param path The full path to the image file.
      */
@@ -513,7 +513,7 @@ public abstract class OPCPackage implements RelationshipSource, Closeable {
     /**
      * Add a thumbnail to the package. This method is provided to make easier
      * the addition of a thumbnail in a package. You can do the same work by
-     * using the traditionnal relationship and part mechanism.
+     * using the traditional relationship and part mechanism.
      *
      * @param filename The full path to the image file.
      * @param data the image data
