@@ -283,7 +283,7 @@ public class TestBuildFile {
         expectBuildException("test-failonerror", "fail on error", null);
         assertLogContaining("Using input file: " + TestBuildFile.getDataDir() + "/spreadsheet/excelant.xls");
         assertLogNotContaining("failed because 1 of 0 evaluations failed to evaluate correctly. " +
-            "Failed to evaluate cell 'MortageCalculatorFunction'!$D$3");
+            "Failed to evaluate cell 'MortgageCalculatorFunction'!$D$3");
     }
 
     @Test
@@ -291,7 +291,7 @@ public class TestBuildFile {
         expectBuildException("test-failonerror-nodetails", "fail on error", null);
         assertLogNotContaining("Using input file: " + TestBuildFile.getDataDir() + "/spreadsheet/excelant.xls");
         assertLogNotContaining("failed because 1 of 0 evaluations failed to evaluate correctly. " +
-            "Failed to evaluate cell 'MortageCalculatorFunction'!$D$3");
+            "Failed to evaluate cell 'MortgageCalculatorFunction'!$D$3");
     }
 
     @Test
