@@ -1505,7 +1505,7 @@ public class XWPFRun implements ISDTContents, IRunElement, CharacterRun {
      */
     @Deprecated
     @Removal(version = "7.0.0")
-    public STHighlightColor.Enum getTextHightlightColor() {
+    public STHighlightColor.Enum getTextHighlightColor() {
         return getTextHighlightColor();
     }
 
