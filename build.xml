@@ -2761,7 +2761,7 @@ under the License.
 
 
     <target name="test-scratchpad-download-resources">
-        <!-- disable font downloading until TestFontRendering works on all plattforms -->
+        <!-- disable font downloading until TestFontRendering works on all platforms -->
         <!-- ... eventually copy the files into the resource dirs ... -->
         <!--
         <mkdir dir="build/scratchpad-test-resources"/>
