@@ -950,7 +950,7 @@ public abstract class OPCPackage implements RelationshipSource, Closeable {
             // If the specified partis flagged as deleted, we make it
             // available
             part.setDeleted(false);
-            // and delete the old part to replace it thereafeter
+            // and delete the old part to replace it thereafter
             this.partList.remove(part._partName);
         }
         this.partList.put(part._partName, part);
