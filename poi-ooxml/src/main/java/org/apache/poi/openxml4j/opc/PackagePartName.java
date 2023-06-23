@@ -364,13 +364,13 @@ public final class PackagePartName implements Comparable<PackagePartName> {
     }
 
     /**
-     * Throws an exception if the specified part name ends with a forwar slash
+     * Throws an exception if the specified part name ends with a forward slash
      * character '/'. [M1.5]
      *
      * @param partUri
      *            The part name to check.
      * @throws InvalidFormatException
-     *             If the specified part name ends with a forwar slash character
+     *             If the specified part name ends with a forward slash character
      *             '/'.
      */
     private static void throwExceptionIfPartNameEndsWithForwardSlashChar(
