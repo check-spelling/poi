@@ -347,7 +347,7 @@ final class TestExcelExtractor {
 
     @Test
     void testNullPointerException() throws IOException {
-        try (ExcelExtractor extractor = createExtractor("ar.org.apsme.www_Form%20Inscripcion%20Curso%20NO%20Socios.xls")) {
+        try (ExcelExtractor extractor = createExtractor("ar.org.apsme.www_Form%20Inscripción%20Curso%20NO%20Socios.xls")) {
             assertNotNull(extractor);
             assertNotNull(extractor.getText());
         }
