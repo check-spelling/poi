@@ -688,7 +688,7 @@ public final class PackagingURIHelper {
              value = value.replace('\\', '/');
         }
 
-        // URI fragemnts (those starting with '#') are not encoded
+        // URI fragments (those starting with '#') are not encoded
         // and may contain white spaces and raw unicode characters
         int fragmentIdx = value.indexOf('#');
         if(fragmentIdx != -1){
