@@ -3076,7 +3076,7 @@ under the License.
 
         <tstamp>
             <!-- usually overwritten by a command line argument -->
-            <!-- for convience this is kept in the same format as in the release-prep call  -->
+            <!-- for convenience this is kept in the same format as in the release-prep call  -->
             <format property="file_date" pattern="yyyyMMdd" locale="US"/>
         </tstamp>
 
