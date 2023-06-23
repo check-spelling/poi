@@ -834,7 +834,7 @@ public class SignatureConfig {
     }
 
     /**
-     * @param xadesIssuerNameNoReverseOrder when true, the issuer DN instead of the issuer X500 prinicpal is used
+     * @param xadesIssuerNameNoReverseOrder when true, the issuer DN instead of the issuer X500 principal is used
      */
     public void setXadesIssuerNameNoReverseOrder(boolean xadesIssuerNameNoReverseOrder) {
         this.xadesIssuerNameNoReverseOrder = xadesIssuerNameNoReverseOrder;
@@ -1164,7 +1164,7 @@ public class SignatureConfig {
         addCachedCertificate(null, x509);
     }
 
-    public X509Certificate getCachedCertificateByPrinicipal(String principalName) {
+    public X509Certificate getCachedCertificateByPrincipal(String principalName) {
         if (keyStore == null) {
             return null;
         }
