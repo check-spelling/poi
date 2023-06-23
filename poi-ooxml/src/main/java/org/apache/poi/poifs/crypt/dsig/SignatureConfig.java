@@ -1004,7 +1004,7 @@ public class SignatureConfig {
 
 
     /**
-     * @return the cannonicalization method for XAdES-XL signing.
+     * @return the canonicalization method for XAdES-XL signing.
      * Defaults to {@code EXCLUSIVE}
      * @see <a href="http://docs.oracle.com/javase/7/docs/api/javax/xml/crypto/dsig/CanonicalizationMethod.html">javax.xml.crypto.dsig.CanonicalizationMethod</a>
      */
@@ -1013,7 +1013,7 @@ public class SignatureConfig {
     }
 
     /**
-     * @param xadesCanonicalizationMethod the cannonicalization method for XAdES-XL signing
+     * @param xadesCanonicalizationMethod the canonicalization method for XAdES-XL signing
      * @see <a href="http://docs.oracle.com/javase/7/docs/api/javax/xml/crypto/dsig/CanonicalizationMethod.html">javax.xml.crypto.dsig.CanonicalizationMethod</a>
      */
     public void setXadesCanonicalizationMethod(String xadesCanonicalizationMethod) {
